@@ -10,8 +10,8 @@ class WeatherRepository extends Disposable {
   WeatherRepository(this._dio);
   Future<WeatherModel> getWeatherInfo(
       {@required String q, int days = 10}) async {
-    // print(
-    //     '${Constants.URLOPENWEATHER}?key=${Constants.KEYWEATHER}&q=$q&days=$days');
+    print(
+        '${Constants.URLOPENWEATHER}?key=${Constants.KEYWEATHER}&q=$q&days=$days');
     try {
       final response = await _dio.get(
           '${Constants.URLOPENWEATHER}?key=${Constants.KEYWEATHER}&q=$q&days=$days');
